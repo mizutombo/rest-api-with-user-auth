@@ -56,7 +56,7 @@ describe('fleas', () => {
   };
 
 
-  it('/GET all big fleas', done => { // FAIL test for GET all when array is empty
+  it('/GET all big fleas', done => { // PASS test for GET all when array is empty
     request
       .get('/BigFleas')
       .set('Authorization', `Bearer ${token}`)
@@ -79,7 +79,7 @@ describe('fleas', () => {
       .catch(done);
   });
 
-  it('/POST big flea', done => { // FAIL test for POST to big fleas collection
+  it('/POST big flea', done => { // PASS test for POST to big fleas collection
     request
       .post('/BigFleas')
       .set('Authorization', `Bearer ${token}`)
@@ -109,7 +109,7 @@ describe('fleas', () => {
       .catch(done);
   });
 
-  it('/GET big flea by id', done => { // FAIL test for GET big flea by id
+  it('/GET big flea by id', done => { // PASS test for GET big flea by id
     request
       .get(`/BigFleas/${MongoFlea._id}`)
       .set('Authorization', `Bearer ${token}`)
@@ -133,7 +133,7 @@ describe('fleas', () => {
       .catch(done);
   });
 
-  it('/GET all big fleas after post', done => { // FAIL test for GET all big fleas after POST
+  it('/GET all big fleas after post', done => { // PASS test for GET all big fleas after POST
     request
       .get('/BigFleas')
       .set('Authorization', `Bearer ${token}`)
@@ -157,7 +157,7 @@ describe('fleas', () => {
       .catch(done);
   });
 
-  it('add a new big flea', done => { // FAIL test for POST new big flea
+  it('add a new big flea', done => { // PASS test for POST new big flea
     request
       .post('/BigFleas')
       .set('Authorization', `Bearer ${token}`)
